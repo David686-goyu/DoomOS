@@ -1,0 +1,11 @@
+<!-- Save as index.html -->
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+<script>
+    const socket = io('https://axiomatic-dark-cymbal.glitch.me');
+
+  socket.on('message', (msg) => {
+    console.log('Received:', msg);
+  });
+
+  socket.emit('message', 'Hello from browser!');
+</script>
